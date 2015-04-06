@@ -4,15 +4,24 @@
 	<title>instaSearch</title>
 	<link rel = 'stylesheet' href = './styles/styles.css'>
 </head>
-<body>
-	<div class = 'main'>
+<body ng-app='app' ng-controller='searchCtrl'>
+	<div class = 'middle'>
 		<form novalidate name="mainForm" ng-submit="submit()">
-			<input autofocus required type="text" name="tagInput" ng-model="formData.tag" placeholder="What do you want to search for?" >
+			<input autofocus required type="text" name="tagInput" ng-model="formData.tag" placeholder="#" >
 			<input id="submitButton" type="submit">
 		</form>
 	</div>
+
 	<div class = 'messageDiv'>
 		<!-- 		message goes here-->	
+	</div>
+
+	<div id="imagesDiv" class="middle">
+		<span ng-class="images" ng-if="haveResults" ng-repeat="image in images">
+			<a href="{{image.link}}" target="_blank">
+				<img ng-src="{{image.images.low_resolution.url}}" alt="Image by: {{image.user.full_name}}" class="images my-show-hide-animation" ng-hide="fadeResults">
+			</a>
+		</span>
 	</div>
 
 
