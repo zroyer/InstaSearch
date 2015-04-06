@@ -3,17 +3,17 @@
 <head>
 	<title>InstaSearch</title>
 	<link rel = 'stylesheet' href = './styles/styles.css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
 <body ng-app='app' ng-controller='searchCtrl'>
 	
-	<div class = 'middle'>
-		<form novalidate name="mainForm" ng-submit="submit()">
-			<input autofocus required type="text" name="tagInput" ng-model="tempData.tag" placeholder="#" >
-			<input id="submitButton" type="submit">
+	<div class = 'topDiv'>
+		<form novalidate name="mainForm" ng-submit="submit()" class="form-inline">
+			<input autofocus required type="text" class="form-control" name="tagInput" ng-model="tempData.tag" placeholder="#" >
+			<input id="submitButton" class="btn btn-primary" type="submit">
 		</form>
 	</div>
 
-	<br><br>
 
 	<div class = 'messageDiv'>
 		{{message}}
@@ -21,7 +21,7 @@
 
 	<br><br>
 
-	<div id="imagesDiv" class="middle">
+	<div id="imagesDiv">
 		<span ng-class="images" ng-if="gotResults" ng-repeat="image in images">
 			<a href="{{image.link}}" target="_blank">
 				<img ng-src="{{image.images.low_resolution.url}}" alt="Posted by: {{image.user.full_name}}" class="images">

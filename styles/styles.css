@@ -1,5 +1,33 @@
 body{
-	
+
 }
+
+.images{
+padding: 5px;
+
+}
+
+#imagesDiv{
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  margin-bottom: 50px;
+}
+
+.topDiv{
+	margin-top: 40px;
+	margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 75%;
+}
+
+.messageDiv{
+	margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  width: 75%;
+}
+
 
 

@@ -30,14 +30,14 @@ angular.module('app', [])
 	        		if (results.data.length) {
 	        			$scope.gotResults = true
 	        			$scope.images = results.data
-	        			$scope.message = 'Now displaying the first ' + results.data.length +
-	        							 ' images tagged with #' + $scope.tempData.query 
+	        			$scope.message = 'Now displaying the ' + results.data.length +
+	        							 ' most recent images tagged with #' + $scope.tempData.query 
 	        		} else {
 	        			$scope.message = 'The search for #' + $scope.tempData.query + ' produced no results'
 	        		}
 	        	}
 	        }).error(function() {
-	            alert('The search for #' + tagReq + ' was unsuccessful');
+	            alert('The search for #' + tagReq + ' was unsuccessful. Please make sure the query string has no spaces.');
 	            $scope.message = "";
 	        })
 	    };
