@@ -13,12 +13,16 @@
 		</form>
 	</div>
 
+	<br><br>
+
 	<div class = 'messageDiv'>
 		{{message}}
 	</div>
 
+	<br><br>
+
 	<div id="imagesDiv" class="middle">
-		<span ng-class="images" ng-if="results" ng-repeat="image in images">
+		<span ng-class="images" ng-if="gotResults" ng-repeat="image in images">
 			<a href="{{image.link}}" target="_blank">
 				<img ng-src="{{image.images.low_resolution.url}}" alt="Posted by: {{image.user.full_name}}" class="images">
 			</a>

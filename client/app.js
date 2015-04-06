@@ -1,7 +1,7 @@
 angular.module('app', [])
 
 .controller('searchCtrl', ['$scope', '$http', function($scope, $http) {
-	$scope.tempData = {message: '', submitted: false, results: false};  //submitted?
+	$scope.tempData = {message: '', submitted: false, gotResults: false};  //submitted?
 	$scope.imageData = {data: []};
 
 	$scope.submit = function() {
@@ -13,6 +13,34 @@ angular.module('app', [])
 			$scope.getImages($scope.tempData.query);
 		};
 	};
+
+	$scope.getImages = function(tagReq) {
+	    	var CLIENT_ID = "9e51654d8dd64c22aa4933a10dd51194"
+	        var url = "https://api.instagram.com/v1/tags/" + tagReq + "/media/recent"
+	        var request = {
+	        	callback: 'JSON_CALLBACK',
+	        	client_id: CLIENT_ID
+	        };
+	        $http({
+	            method: 'JSONP',  //This JSONP method tells Angular to use JSONP for the GET.
+	            url: url,
+	            params: request
+	        }).success(function(results) {
+	        	if (results.meta.code == 200) {
+	        		if (results.data.length) {
+	        			$scope.gotResults = true
+	        			$scope.images = results.data
+	        			$scope.message = 'Now displaying the first ' + results.data.length +
+	        							 ' images tagged with #' + $scope.tempData.query 
+	        		} else {
+	        			$scope.message = 'The search for #' + $scope.tempData.query + ' produced no results'
+	        		}
+	        	}
+	        }).error(function() {
+	            alert('The search for #' + tagReq + ' was unsuccessful');
+	            $scope.message = "";
+	        })
+	    };
 
 
 }]);
