@@ -1,17 +1,20 @@
 body {
-  padding-top: 25px;
+  padding-top: 30px;
 }
 .image-responsive {
-  margin: 5px;
-  border:1px solid #e1e1e1;
+  width: 250px;
+  height: auto;
+  margin: 0.5%;
+  margin-bottom:0.75%;
+  border: 1px solid #e1e1e1;
 }
 .image-responsive:hover{
-  box-shadow: 0 0 10px gray;
+  box-shadow: 0 0 10px black;
 }
 #imagesDiv {
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
   margin-bottom: 50px;
 }
 .navbar {

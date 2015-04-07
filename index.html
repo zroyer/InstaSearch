@@ -24,10 +24,12 @@
 	<div id="imagesDiv">
 		<span ng-class="image" ng-if="gotResults" ng-repeat="image in images">
 			<a href="{{image.link}}" target="_blank">
-				<img ng-src="{{image.images.low_resolution.url}}" alt="Posted by: {{image.user.full_name}}" class="image-responsive">
+				<img ng-src="{{image.images.low_resolution.url}}" class="image-responsive">
 			</a>
 		</span>
 	</div>
+
+
 
 </body>
 <script text="text/javascript" src="https://code.angularjs.org/1.3.0-beta.13/angular.min.js"></script>
