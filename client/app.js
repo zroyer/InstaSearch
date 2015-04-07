@@ -22,21 +22,21 @@ angular.module('app', [])
 	        	client_id: CLIENT_ID
 	        };
 	        $http({
-	            method: 'JSONP',  //This JSONP method tells Angular to use JSONP for the GET.
+	            method: 'JSONP',
 	            url: url,
 	            params: request
-	        }).success(function(results) {
-	        	if (results.meta.code == 200) {
-	        		if (results.data.length) {
+	        }).success(function(results){
+	        	if (results.meta.code == 200){
+	        		if (results.data.length){
 	        			$scope.gotResults = true
 	        			$scope.images = results.data
 	        			$scope.message = 'Now displaying the ' + results.data.length +
 	        							 ' most recent images tagged with #' + $scope.tempData.query 
-	        		} else {
+	        		} else{
 	        			$scope.message = 'The search for #' + $scope.tempData.query + ' produced no results'
 	        		}
 	        	}
-	        }).error(function() {
+	        }).error(function(){
 	            alert('The search for #' + tagReq + ' was unsuccessful. Please make sure the query string has no spaces.');
 	            $scope.message = "";
 	        })

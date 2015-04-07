@@ -1,32 +1,40 @@
 body{
+  padding-top: 30px;
 
 }
 
 .images{
 padding: 5px;
-
 }
 
 #imagesDiv{
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 90%;
   margin-bottom: 50px;
 }
 
-.topDiv{
-	margin-top: 40px;
-	margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-  width: 75%;
+
+.navbar{
+  height: 55px; 
 }
 
-.messageDiv{
-	margin-left: auto;
-  margin-right: auto;
-  padding: 5px;
-  width: 75%;
+.inner{
+  width:80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-top: 10px;
+}
+.messages{
+  float:left;
+  margin-left:0px;
+  font-size: 18px;
+  height:34px;
+  margin-top: 5px;
+}
+
+.right{
+  float:right;
 }
 
 

@@ -7,17 +7,22 @@
 </head>
 <body ng-app='app' ng-controller='searchCtrl'>
 	
-	<div class = 'topDiv'>
-		<form novalidate name="mainForm" ng-submit="submit()" class="form-inline">
-			<input autofocus required type="text" class="form-control" name="tagInput" ng-model="tempData.tag" placeholder="#" >
-			<input id="submitButton" class="btn btn-primary" type="submit">
-		</form>
+	<div class = 'navbar navbar-default navbar-fixed-top'>
+		<div class = 'inner'>
+			<form novalidate name="mainForm" ng-submit="submit()" class="form-inline">
+				<span class="messages">{{message}}</span>
+				<div class = 'right'>
+					<input autofocus required type="text" class="form-control text" name="tagInput" ng-model="tempData.tag" placeholder="#" >
+					<input id="submitButton" class="btn btn-primary" type="submit">
+				</div>
+			</form>
+		</div>
 	</div>
 
 
-	<div class = 'messageDiv'>
+<!-- 	<div class = 'messageDiv'>
 		{{message}}
-	</div>
+	</div> -->
 
 	<br><br>
 
