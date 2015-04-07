@@ -1,10 +1,11 @@
 body{
-  padding-top: 30px;
+  padding-top: 25px;
 
 }
 
-.images{
+.image-responsive{
 padding: 5px;
+border
 }
 
 #imagesDiv{

@@ -27,9 +27,9 @@
 	<br><br>
 
 	<div id="imagesDiv">
-		<span ng-class="images" ng-if="gotResults" ng-repeat="image in images">
+		<span ng-class="image" ng-if="gotResults" ng-repeat="image in images">
 			<a href="{{image.link}}" target="_blank">
-				<img ng-src="{{image.images.low_resolution.url}}" alt="Posted by: {{image.user.full_name}}" class="images">
+				<img ng-src="{{image.images.low_resolution.url}}" alt="Posted by: {{image.user.full_name}}" class="image-responsive">
 			</a>
 		</span>
 	</div>
