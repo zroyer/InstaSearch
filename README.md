@@ -1,7 +1,7 @@
 # InstaSearch
 
 ## Summary
-An app for searching tagged images on Instagram, using AngularJS and the Instagram API.
+An app for searching tagged images on Instagram. Built with AngularJS and the Instagram API.
 
 ## Demo
 ![Alt tag](./images/demo.gif)
