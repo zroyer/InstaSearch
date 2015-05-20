@@ -14,33 +14,33 @@ angular.module('app', [])
 		};
 	};
 
-	$scope.getImages = function(tagReq) {
-	    	var CLIENT_ID = "9e51654d8dd64c22aa4933a10dd51194"
-	        var url = "https://api.instagram.com/v1/tags/" + tagReq + "/media/recent"
-	        var request = {
-	        	callback: 'JSON_CALLBACK',
-	        	client_id: CLIENT_ID
-	        };
-	        $http({
-	            method: 'JSONP',
-	            url: url,
-	            params: request
-	        }).success(function(results){
-	        	if (results.meta.code == 200){
-	        		if (results.data.length){
-	        			$scope.gotResults = true
-	        			$scope.images = results.data
-	        			$scope.message = 'Now displaying the ' + results.data.length +
-	        							 ' most recent images tagged with #' + $scope.tempData.query 
-	        		} else{
-	        			$scope.message = 'The search for #' + $scope.tempData.query + ' produced no results'
-	        		}
-	        	}
-	        }).error(function(){
-	            alert('The search for #' + tagReq + ' was unsuccessful. Please make sure the query string has no spaces.');
-	            $scope.message = "";
-	        })
-	    };
+	$scope.getImages = function(query) {
+  	var id = "9e51654d8dd64c22aa4933a10dd51194"
+      var url = "https://api.instagram.com/v1/tags/" + query + "/media/recent"
+      var request = {
+      	callback: 'JSON_CALLBACK',
+      	client_id: id
+      };
+      $http({
+          method: 'JSONP',
+          url: url,
+          params: request
+      }).success(function(results){
+      	if (results.meta.code == 200){
+      		if (results.data.length){
+      			$scope.gotResults = true
+      			$scope.images = results.data
+      			$scope.message = 'Now displaying the ' + results.data.length + ' most recent images tagged with #' + $scope.tempData.query 
+      		} 
+      		else{
+      			$scope.message = 'The search for #' + $scope.tempData.query + ' produced no results'
+      		}
+      	}
+      }).error(function(){
+          alert('The search for #' + query + ' was unsuccessful. Please make sure the query string has no spaces.');
+          $scope.message = "";
+      })
+  };
 
 
 }]);

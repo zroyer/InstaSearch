@@ -1,38 +1,33 @@
 body {
-  padding-top: 30px;
+  height: 100%; 
+  width: 100%;
 }
+
+.navbar {
+  height: 52px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
 .image-responsive {
-  width: 250px;
-  height: auto;
-  margin: 0.5%;
-  margin-bottom:0.75%;
+  width: 220px;
+  height: 220px;
+  margin: 1.5%;
+  margin-bottom: 2%;
   border: 1px solid #e1e1e1;
 }
+
 .image-responsive:hover{
   box-shadow: 0 0 10px black;
 }
+
 #imagesDiv {
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 50px;
+  width: 100%;
+  overflow-y: auto;
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px; 
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
-.navbar {
-  height: 55px;
-}
-.inner {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding-top: 10px;
-}
-.messages {
-  float: left;
-  margin-left: 0px;
-  font-size: 18px;
-  height: 34px;
-  margin-top: 5px;
-}
-.right {
-  float: right;
-}
+

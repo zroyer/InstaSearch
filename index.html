@@ -5,18 +5,49 @@
 	<link rel = 'stylesheet' href = './styles/styles.css'>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 </head>
+<!-- <body ng-app='app' ng-controller='searchCtrl'>
+
+	<div class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<div class="navbar-brand">
+					<span>{{message}}</span>
+				</div>	
+			</div>
+			<form novalidate name="mainForm" class="navbar-form navbar-right" ng-submit="submit()">
+			  <div class="form-group">
+			    <input autofocus required type="text" class="form-control" name="tagInput" ng-model="tempData.tag" placeholder="#">
+			  </div>
+			  <button type="submit" class="btn btn-primary">Search</button>
+			</form>
+		<div>
+	</div>
+
+	<br><br>
+
+	<div class="container-fluid imagescontainer">
+		<span ng-class="image" ng-if="gotResults" ng-repeat="image in images">
+			<a href="{{image.link}}">
+				<img ng-src="{{image.images.low_resolution.url}}" class="image-responsive">
+			</a>
+		</span>
+	</div>
+
+</body> -->
+
+
 <body ng-app='app' ng-controller='searchCtrl'>
 	
 	<div class = 'navbar navbar-default navbar-fixed-top'>
-		<div class = 'inner'>
-			<form novalidate name="mainForm" ng-submit="submit()" class="form-inline">
+		<div class='navbar-header hidden-sm hidden-xs'>
+			<div class='navbar-brand'>
 				<span class="messages">{{message}}</span>
-				<div class = 'right'>
-					<input autofocus required type="text" class="form-control text" name="tagInput" ng-model="tempData.tag" placeholder="#" >
-					<input id="submitButton" class="btn btn-primary" type="submit">
-				</div>
-			</form>
-		</div>
+			</div>	
+		</div>	
+		<form novalidate name="mainForm" ng-submit="submit()" class="navbar-form navbar-right">
+			<input autofocus required type="text" class="form-control text" name="tagInput" ng-model="tempData.tag" placeholder="#" >
+			<input id="submitButton" class="btn btn-primary hidden-xs" type="submit">
+		</form>
 	</div>
 
 	<br><br>
@@ -32,6 +63,8 @@
 
 
 </body>
+
+
 <script text="text/javascript" src="https://code.angularjs.org/1.3.0-beta.13/angular.min.js"></script>
 <script type="text/javascript" src="https://code.angularjs.org/1.3.0-beta.13/angular-animate.min.js"></script>
 <script type="text/javascript" src="./client/app.js"></script>
