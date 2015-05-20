@@ -1,8 +1,8 @@
 angular.module('app', [])
 
 .controller('searchCtrl', ['$scope', '$http', function($scope, $http) {
-	$scope.tempData = {message: '', submitted: false, gotResults: false};  //submitted?
-	$scope.imageData = {data: []};
+  $scope.tempData = {message: '', submitted: false, gotResults: false};  //submitted?
+  $scope.imageData = {data: []};
 
   $scope.submit = function() {
     if($scope.mainForm.$valid) {
